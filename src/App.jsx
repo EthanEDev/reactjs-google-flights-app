@@ -24,21 +24,17 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
  *****************************************************************************/
 export default function App() {
   return (
-    <StrictMode>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <LocationProvider>
-          <Router>
-            <Header />
-            <Container maxWidth="xl">
-              <Routes>
-                {/* Force to redirect from home ("/") to "/travel/flights" */}
-                <Route path="/" element={<Navigate to="/travel/flights" />} />
-                <Route path="/travel/flights" element={<FlightsPage />} />
-              </Routes>
-            </Container>
-          </Router>
-        </LocationProvider>
-      </LocalizationProvider>
-    </StrictMode>
+    <>
+      <Header />
+      <Container maxWidth="xl">
+        <Router>
+          <Routes>
+            {/* Force to redirect from home ("/") to "/travel/flights" */}
+            <Route path="/" element={<Navigate to="/travel/flights" />} />
+            <Route path="/travel/flights" element={<FlightsPage />} />
+          </Routes>
+        </Router>
+      </Container>
+    </>
   );
 }

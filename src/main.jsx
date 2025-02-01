@@ -7,16 +7,22 @@ import App from "./App";
 
 /******************************************************************************
  * Entry point of the React application.
- * 
+ *
  * This file sets up the React application by rendering the root component
  * into the DOM. It uses the `ReactDOM.createRoot` method to create a root
  * and renders the application wrapped with `ThemeProvider` and `CssBaseline`
  * from Material-UI for consistent styling.
- * 
+ *
  *****************************************************************************/
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <App />
-  </ThemeProvider>
+  <StrictMode>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <LocationProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </LocationProvider>
+    </LocalizationProvider>
+  </StrictMode>
 );
