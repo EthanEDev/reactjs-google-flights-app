@@ -25,6 +25,7 @@ You can try out the live demo of this project here: **[Live Demo Link](https://r
 
 - **React.js**: Built using React for a fast and interactive UI.
 - **Material UI**: Utilized for styling and pre-built components.
+- **Axios**: For handling API requests and fetching flight data.
 - **Context API**: Managed state for search parameters.
 - **React Router**: Handled page navigation and routing.
 
