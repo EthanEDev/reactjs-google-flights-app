@@ -12,17 +12,12 @@ A simple flight search application built with React.js. This project is a clone 
 
 ## **Live Demo**
 
-You can try out the live demo of this project here: **[Live Demo Link](#)**
+You can try out the live demo of this project here: **[Live Demo Link]([#](https://reactjs-google-flights-app.vercel.app/))**
 
 ---
 
 ## **Features**
 
-- **Flight Search**: Users can search for flights by selecting departure and destination locations.
-- **Date Selection**: Allows users to choose travel dates for one-way and round-trip flights.
-- **Passenger & Class Selection**: Users can specify the number of passengers and travel class.
-- **Search Results Display**: Displays available flights based on user input with basic details.
-- **Basic Filtering**: Implements limited filtering options for refining search results.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **APIs**:
   - **Current Location Based on IP**: Fetches the user's current location using their IP address.
