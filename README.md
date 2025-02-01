@@ -12,7 +12,7 @@ A simple flight search application built with React.js. This project is a clone 
 
 ## **Live Demo**
 
-You can try out the live demo of this project here: **[Live Demo Link]([#](https://reactjs-google-flights-app.vercel.app/))**
+You can try out the live demo of this project here: **[Live Demo Link](https://reactjs-google-flights-app.vercel.app/)**
 
 ---
 
