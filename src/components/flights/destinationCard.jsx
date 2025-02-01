@@ -19,23 +19,23 @@ export default function DestinationCard({city}) {
       sx={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "stretch",
         cursor: "pointer"
       }}
       elevation={0}
     >
       <CardMedia
         sx={{
-          width: { xs: "250px", lg: "134px", xl: "192px" },
+          width: { xs: "250px", md: "134px", xl: "192px" },
           height: "134px",
           borderRadius: 4,
         }}
         image={PopularTrips}
       />
-      <Stack display="flex" width="100%">
+      <Stack display="flex">
         <CardHeader
           title={city.presentation.title}
           action="$120"
+          sx={{p: 1}}
           slotProps={{
             title: {
               variant: "subtitle2",
@@ -48,11 +48,11 @@ export default function DestinationCard({city}) {
             },
           }}
         />
-        <CardContent>
+        <CardContent sx={{p: 1}}>
           <Typography color="textSecondary" variant="subtitle2">
             Mar 27 - Apr 3
           </Typography>
-          <Typography noWrap color="textSecondary" variant="subtitle2">
+          <Typography color="textSecondary" variant="subtitle2">
             Nonstop . 2 hr 50 minAir . Europa
           </Typography>
         </CardContent>

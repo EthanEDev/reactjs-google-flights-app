@@ -21,7 +21,7 @@ export default function PopularTrips({currentCity, nearbyCities}) {
       </Stack>
       <Grid2 container spacing={2}>
         {nearbyCities.map((city, index) => (
-          <Grid2 key={index} xs={12} md={6} xl={6}>
+          <Grid2 key={index} xs={6} md={6}>
             <DestinationCard city={city} />
           </Grid2>
         ))}

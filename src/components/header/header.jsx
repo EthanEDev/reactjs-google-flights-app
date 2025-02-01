@@ -27,7 +27,7 @@ const navigationProps = {
 
 /******************************************************************************
  * Header component that renders the application's top navigation bar.
- * 
+ *
  * return (
  *   <Header />
  * )
@@ -43,7 +43,7 @@ export default function Header() {
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar variant="outlined" position="sticky" color="inherit">
+    <AppBar variant="outlined" elevation={0} position="sticky" color="inherit">
       <Toolbar
         disableGutters
         sx={{ px: 0.5, display: "flex", justifyContent: "space-between" }}
