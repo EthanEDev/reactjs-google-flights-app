@@ -31,7 +31,11 @@ export default function FlightSearch() {
   if (flightsError)
     return <Typography color="error">{flightsError}</Typography>;
   if (locationLoading || flightsLoading || Object.keys(flights).length === 0)
-    return <CircularProgress />;
+    return (
+      <Box display="flex" justifyContent="center">
+        <CircularProgress />
+      </Box>
+    );
 
   const currentCity =
     flights.current.navigation.relevantHotelParams.localizedName;
@@ -44,14 +48,13 @@ export default function FlightSearch() {
       <BreadCrumbs currentCity={currentCity} />
       <Typography variant="h5">Cheap flights from {currentCity}</Typography>
       <PopularTrips currentCity={currentCity} nearbyCities={nearbyCities} />
-      
+
       <Typography variant="body1" fontWeight="bold">
         Find flights from {currentCity} to anywhere
       </Typography>
-      <Paper
-        elevation={4}
-        sx={{ p: 1.25, height: 150, position: "relative" }}
-      >map</Paper>
+      <Paper elevation={4} sx={{ p: 1.25, height: 150, position: "relative" }}>
+        map
+      </Paper>
     </Box>
   );
 }

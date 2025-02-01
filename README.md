@@ -20,8 +20,8 @@ You can try out the live demo of this project here: **[Live Demo Link](https://r
 
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **APIs**:
-  - **Current Location Based on IP**: Fetches the user's current location using their IP address.
-  - **Flight Data**: Uses the [Sky Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper) to get flight data for the current location.
+   - **Current Location Based on IP**: Fetches the user's current location using [ipapi.co](https://ipapi.co/).
+   - **Flight Data**: Uses the [Sky Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper) to get flight data for the current location.
   
 ---
 
