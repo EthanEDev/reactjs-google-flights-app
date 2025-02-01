@@ -2,19 +2,16 @@
 
 A simple flight search application built with React.js. This project is a clone of Google Flights, developed as part of a job assessment with a strict one-day deadline. The challenge was to implement as much functionality as possible within the given time constraint.
 
----
 
 ## **Screenshot**
 
 ![Google Flight Screenshot](./screenshot.png)
 
----
 
 ## **Live Demo**
 
 You can try out the live demo of this project here: **[Live Demo Link](https://reactjs-google-flights-app.vercel.app/)**
 
----
 
 ## **Features**
 
@@ -23,16 +20,36 @@ You can try out the live demo of this project here: **[Live Demo Link](https://r
    - **Current Location Based on IP**: Fetches the user's current location using [ipapi.co](https://ipapi.co/).
    - **Flight Data**: Uses the [Sky Scrapper API](https://rapidapi.com/apiheya/api/sky-scrapper) to get flight data for the current location.
   
----
 
 ## **Technologies Used**
 
 - **React.js**: Built using React for a fast and interactive UI.
 - **Material UI**: Utilized for styling and pre-built components.
+- **Axios**: For handling API requests and fetching flight data.
 - **Context API**: Managed state for search parameters.
 - **React Router**: Handled page navigation and routing.
 
----
+## **Structure**
+
+```sh
+reactjs-google-flights-app/
+├── public/           # Static assets and index.html
+├── src/              # Main source code
+│   ├── assets/       # Images, icons, and static assets
+│   ├── components/   # Reusable UI components
+│   ├── contexts/     # React context providers
+│   ├── hooks/        # Custom hooks for data fetching and utilities
+│   ├── pages/        # Page components
+│   ├── theme/        # Theme-related configurations
+│   ├── App.jsx       # Root component
+│   ├── main.jsx      # Entry point
+│   ├── index.css     # Global styles
+├── README.md         # Project documentation
+├── LICENSE           # License information
+├── package.json      # Project dependencies and scripts
+├── vite.config.js    # Vite configuration
+└── eslint.config.js  # ESLint configuration
+```
 
 ## **Installation**
 
@@ -78,7 +95,6 @@ If the project uses Vite instead of Create React App, follow these steps:
    npm run dev
    ```
 
----
 
 ## **Contributing**
 
@@ -99,13 +115,11 @@ Contributions are welcome! If you have suggestions for improvements or find any 
    ```
 5. Create a new Pull Request.
 
----
 
 ## **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
 ## **Contact**
 
