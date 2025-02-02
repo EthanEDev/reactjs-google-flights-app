@@ -1,12 +1,12 @@
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import theme from "./theme/theme";
 import App from "./App";
-import { LocalizationProvider } from "@mui/x-date-pickers";
 import { LocationProvider } from "./contexts/locationContext";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import theme from "./theme/theme";
 
 /******************************************************************************
  * Entry point of the React application.

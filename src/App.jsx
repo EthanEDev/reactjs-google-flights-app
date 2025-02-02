@@ -1,16 +1,12 @@
 import { Container } from "@mui/material";
-import Header from "./components/header/header";
-import FlightsPage from "./pages/flights";
-import { LocationProvider } from "./contexts/locationContext";
 import {
+  Navigate,
+  Route,
   BrowserRouter as Router,
   Routes,
-  Route,
-  Navigate,
 } from "react-router-dom";
-import { StrictMode } from "react";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import Header from "./components/header/header";
+import FlightsPage from "./pages/flights";
 
 /******************************************************************************
  * The main application component.
