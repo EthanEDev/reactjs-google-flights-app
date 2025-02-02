@@ -1,14 +1,23 @@
+import LocationOnIcon from "@mui/icons-material/LocationOnOutlined";
 import {
   FormControl,
   InputAdornment,
   InputLabel,
   MenuItem,
-  OutlinedInput,
   Select,
 } from "@mui/material";
 import { useState } from "react";
-import LocationOnIcon from "@mui/icons-material/LocationOnOutlined";
 
+/******************************************************************************
+ * WhereTo component renders a dropdown select input for choosing a destination.
+ * It uses Material-UI components for styling and functionality.
+ *
+ * return (
+ *   <WhereTo />
+ * )
+ *
+ * @returns {JSX.Element} The rendered component.
+ *****************************************************************************/
 export default function WhereTo() {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
@@ -31,7 +40,6 @@ export default function WhereTo() {
         label="Where to?"
         onOpen={handleOpen}
         onClose={handleClose}
-        
         startAdornment={
           <InputAdornment position="start">
             <LocationOnIcon sx={{ fontSize: 20 }} />

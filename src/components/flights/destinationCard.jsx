@@ -6,6 +6,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import PropTypes from "prop-types";
 import PopularTrips from "./../../assets/pop-trips.jpg";
 
 /******************************************************************************
@@ -13,13 +14,13 @@ import PopularTrips from "./../../assets/pop-trips.jpg";
  *
  * @returns {JSX.Element} The rendered destination card component.
  *****************************************************************************/
-export default function DestinationCard({city}) {
+export default function DestinationCard({ city }) {
   return (
     <Card
       sx={{
         display: "flex",
         flexDirection: "row",
-        cursor: "pointer"
+        cursor: "pointer",
       }}
       elevation={0}
     >
@@ -35,7 +36,7 @@ export default function DestinationCard({city}) {
         <CardHeader
           title={city.presentation.title}
           action="$120"
-          sx={{p: 1}}
+          sx={{ p: 1 }}
           slotProps={{
             title: {
               variant: "subtitle2",
@@ -48,7 +49,7 @@ export default function DestinationCard({city}) {
             },
           }}
         />
-        <CardContent sx={{p: 1}}>
+        <CardContent sx={{ p: 1 }}>
           <Typography color="textSecondary" variant="subtitle2">
             Mar 27 - Apr 3
           </Typography>
@@ -60,3 +61,7 @@ export default function DestinationCard({city}) {
     </Card>
   );
 }
+
+DestinationCard.propTypes = {
+  city: PropTypes.string.isRequired,
+};

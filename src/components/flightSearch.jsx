@@ -18,7 +18,6 @@ export default function FlightSearch() {
    * @type {LocationFlights}
    ***************************************************************************/
   const {
-    location,
     locationLoading,
     locationError,
     flights,

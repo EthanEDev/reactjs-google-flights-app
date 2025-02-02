@@ -1,12 +1,13 @@
 import SearchIcon from "@mui/icons-material/Search";
-import { Box, Button, Grid2, IconButton, Paper, Stack } from "@mui/material";
+import SwapIcon from "@mui/icons-material/SwapHorizOutlined";
+import { Box, Button, IconButton, Paper, Stack } from "@mui/material";
+import PropTypes from "prop-types";
+import Date from "./search/date";
 import FlightClass from "./search/flightClass";
 import PassCount from "./search/passCount";
 import TripType from "./search/tripType";
 import WhereFrom from "./search/whereFrom";
 import WhereTo from "./search/whereTo";
-import Date from "./search/date";
-import SwapIcon from "@mui/icons-material/SwapHorizOutlined";
 
 /******************************************************************************
  * Search component renders a search interface for flights.
@@ -62,3 +63,7 @@ export default function Search({ currentCity }) {
     </Paper>
   );
 }
+
+Search.propTypes = {
+  currentCity: PropTypes.string.isRequired,
+};

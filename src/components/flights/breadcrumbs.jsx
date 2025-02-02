@@ -1,6 +1,7 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import { Breadcrumbs, Typography } from "@mui/material";
 import Link from "@mui/material/Link";
+import PropTypes from "prop-types";
 
 /******************************************************************************
  * BreadCrumbs component renders a breadcrumb navigation for the flights page.
@@ -8,7 +9,7 @@ import Link from "@mui/material/Link";
  * @param {string} props.currentCity - The current city from which the user is traveling.
  * @returns {JSX.Element} The rendered breadcrumb navigation.
  ******************************************************************************/
-export default function BreadCrumbs({currentCity}) {
+export default function BreadCrumbs({ currentCity }) {
   return (
     <Breadcrumbs separator={<ArrowForwardIcon sx={{ fontSize: 13 }} />}>
       <Link
@@ -25,3 +26,7 @@ export default function BreadCrumbs({currentCity}) {
     </Breadcrumbs>
   );
 }
+
+BreadCrumbs.propTypes = {
+  currentCity: PropTypes.string.isRequired,
+};

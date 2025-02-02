@@ -1,5 +1,6 @@
 import InfoIcon from "@mui/icons-material/InfoOutlined";
 import { Box, Grid2, IconButton, Stack, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 import DestinationCard from "./destinationCard";
 
 /******************************************************************************
@@ -8,7 +9,7 @@ import DestinationCard from "./destinationCard";
  * @param {string} props.currentCity - The name of the current city.
  * @returns {JSX.Element} The PopularTrips component.
  *****************************************************************************/
-export default function PopularTrips({currentCity, nearbyCities}) {
+export default function PopularTrips({ currentCity, nearbyCities }) {
   return (
     <Box display="flex" flexDirection="column" gap={2}>
       <Stack display="flex" flexDirection="row" alignItems="center" gap={1}>
@@ -29,3 +30,8 @@ export default function PopularTrips({currentCity, nearbyCities}) {
     </Box>
   );
 }
+
+PopularTrips.propTypes = {
+  currentCity: PropTypes.string.isRequired,
+  nearbyCities: PropTypes.string.isRequired,
+};

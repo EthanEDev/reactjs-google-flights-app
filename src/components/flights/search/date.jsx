@@ -1,4 +1,4 @@
-import { Grid2, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function Date() {

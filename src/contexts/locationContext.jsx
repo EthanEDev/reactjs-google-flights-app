@@ -1,7 +1,12 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import useIPLocation from '../hooks/useIPLocation';
-import useFlights from '../hooks/useFlights';
+import PropTypes from "prop-types";
+import { createContext, useEffect, useState } from "react";
+import useFlights from "../hooks/useFlights";
+import useIPLocation from "../hooks/useIPLocation";
 
+/******************************************************************************
+ * Context to provide location-related data and functionality.
+ * This context can be used to share location information across different components in the application.
+ *****************************************************************************/
 export const LocationContext = createContext();
 
 /******************************************************************************
@@ -27,26 +32,47 @@ export const LocationContext = createContext();
  * @context {Object} LocationContext.flightsParams - The parameters for the flight data.
  *****************************************************************************/
 export const LocationProvider = ({ children }) => {
-  const { location, loading: locationLoading, error: locationError } = useIPLocation();
+  const {
+    location,
+    loading: locationLoading,
+    error: locationError,
+  } = useIPLocation();
   const [locationParams, setLocationParams] = useState(null);
-  const { flights, loading: flightsLoading, error: flightsError } = useFlights(locationParams);
+  const {
+    flights,
+    loading: flightsLoading,
+    error: flightsError,
+  } = useFlights(locationParams);
   const [flightsParams, setFlightsParams] = useState(null);
 
   useEffect(() => {
     if (location) {
-      setLocationParams({ lat: location.lat, lng: location.lng });      
+      setLocationParams({ lat: location.lat, lng: location.lng });
     }
   }, [location]);
   useEffect(() => {
     if (flights) {
-      setFlightsParams(flights);      
+      setFlightsParams(flights);
     }
   }, [flights]);
 
   return (
-    <LocationContext.Provider value={{ location, locationLoading, locationError, flights, flightsLoading, flightsError, flightsParams }}>
+    <LocationContext.Provider
+      value={{
+        location,
+        locationLoading,
+        locationError,
+        flights,
+        flightsLoading,
+        flightsError,
+        flightsParams,
+      }}
+    >
       {children}
     </LocationContext.Provider>
   );
 };
 
+LocationProvider.propTypes = {
+  children: PropTypes.string.isRequired,
+};

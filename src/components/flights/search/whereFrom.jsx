@@ -1,3 +1,4 @@
+import OriginIcon from "@mui/icons-material/TripOriginOutlined";
 import {
   FormControl,
   InputAdornment,
@@ -5,9 +6,15 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
+import PropTypes from "prop-types";
 import { useState } from "react";
-import OriginIcon from "@mui/icons-material/TripOriginOutlined";
 
+/******************************************************************************
+ * Component for selecting the origin location in a flight search form.
+ *
+ * @param {string} props.current - The current selected origin location.
+ * @returns {JSX.Element} The rendered component.
+ *****************************************************************************/
 export default function WhereFrom({ current }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
@@ -29,7 +36,6 @@ export default function WhereFrom({ current }) {
         label="Where from?"
         onOpen={handleOpen}
         onClose={handleClose}
-        
         startAdornment={
           <InputAdornment position="start">
             <OriginIcon sx={{ fontSize: 15 }} />
@@ -43,3 +49,7 @@ export default function WhereFrom({ current }) {
     </FormControl>
   );
 }
+
+WhereFrom.propTypes = {
+  current: PropTypes.string.isRequired,
+};
