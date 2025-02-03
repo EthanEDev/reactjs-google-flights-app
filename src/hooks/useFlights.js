@@ -27,7 +27,9 @@ export default function useFlights(params) {
         url: `https://sky-scrapper.p.rapidapi.com/api/v1/flights/getNearByAirports`,
         params,
         headers: {
-          "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+          // This API key should ideally be read from the .env file for security reasons.
+          // However, due to a current issue, they are temporarily hardcoded here.
+          "x-rapidapi-key": "9244efc588msh7a73c9a911735a8p1d1621jsn0798ad8968bf",
           "x-rapidapi-host": "sky-scrapper.p.rapidapi.com",
         },
       };
